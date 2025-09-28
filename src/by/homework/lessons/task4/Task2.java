@@ -1,4 +1,5 @@
-package task4;
+package by.homework.lessons.task4;
+
 import java.util.Scanner;
 public class Task2 {
     // На вход даны 3 числа.

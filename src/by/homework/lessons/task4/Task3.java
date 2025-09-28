@@ -1,4 +1,5 @@
-package task4;
+package by.homework.lessons.task4;
+
 import java.util.Scanner;
 public class Task3 {
     // Дано 15/x=result, где x-число, которое вводится с командной строки, result-результат вычисления.
@@ -15,7 +16,7 @@ public class Task3 {
         System.out.print("Введите число x: ");
         int x = scanner.nextInt();
 
-        double result = 15/x;
+        double result = 15.0/x;
         switch ((int) result)  {
             case 3:
                 System.out.println("Результат деления равен 3");
@@ -24,8 +25,7 @@ public class Task3 {
                 System.out.println("Результат деления равен 5");
                 break;
             default:
-                System.out.println("Результат деления равен дробному числу");
-                System.out.println("Точный результат: " + result);
+                System.out.println("Результат деления равен дробному числу. Точный результат: " + result);
         }
     }
 }
