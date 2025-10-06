@@ -1,23 +1,35 @@
 package by.homework.lessons.task5;
 
+import java.util.Scanner;
+
 public class Task2 {
-    // Создать массив из 5 чисел и заполните этот массив вручную.
-    // Создайте второй массив с размерностью больше на 1 чем первый массив.
-    // Необходимо скопировать первый массив со всеми значениями во второй массив.
-    // Последний элемент во втором массиве пусть будет 0.
-    // Выведите второй массив в консоль с помощью цикла for each.
-
     public static void main(String[] args) {
+        //  Ввести 2 положительных числа с консоли с помощью сканера.
+        //  Вывести сумму всех чисел от одного числа до другого.
+        //  (Используйте цикл while).Подсказка. До цикла объявите переменную int sum=0.
+        //  В самом цикле перезаписывайте в эту переменную сумму чисел.
 
-        int[] massive1 = {10, 20, 30, 40, 50};
-        int[] massive2 = new int[massive1.length + 1];
-        for (int i = 0; i < massive1.length; i++) {
-            massive2[i] = massive1[i];
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите первое число: ");
+        int num1 = scanner.nextInt();
+        System.out.println("Введите второе число: ");
+        int num2 = scanner.nextInt();
+
+        int start, end;
+        if (num1 < num2) {
+            start = num1;
+            end = num2;
+        } else {
+            start = num2;
+            end = num1;
         }
-        massive2[massive2.length - 1] = 0;
-        System.out.println("Второй массив:");
-        for (int num : massive2) {
-            System.out.print(num + " ");
+
+        int sum = 0;
+        while (start <= end) {
+            sum += start;
+            start++;
         }
+
+        System.out.println("Сумма чисел в диапазоне: " + sum);
     }
 }
